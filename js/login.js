@@ -19,6 +19,16 @@ function login(){
 
         success: function(data) { alert("Success");
 
+            // Når logges ind, skal der skelnes mellem 1 = aministrator, 0 = brugere.
+
+            if (data.type == 1)
+
+            {
+                window.location.href = "adminView.html"
+            }
+            else {
+                window.location.href ="userView.html"
+            }
         },
         error: function(data) { alert("Failure"); alert(JSON.stringify(data)) }
     });
