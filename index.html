@@ -5,7 +5,8 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
+    <link rel="stylesheet" href="jsBootstraps/dataTables.bootstrap.min.js">
 
 
 
@@ -17,7 +18,7 @@
 
 
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="navBar">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -53,7 +54,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="html/index.html  #loginFunction">Login</a></li>
+                <li><a href="html/centerIndex.html  #loginFunction">Login</a></li>
             </ul>
         </div>
     </div>
@@ -61,7 +62,7 @@
 
 
 
-<div class="jumbotron">
+<div class="jumbotron" id="centerPage">
     <h1>Jumbotron</h1>
     <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
     <p><a class="btn btn-primary btn-lg">Learn more</a></p>
@@ -74,8 +75,32 @@
 
 
 
+<script type="text/javascript" >
+
+    $(document).ready(function() {
+
+                $(function () {
+                $("#navBar a").on("click", function (e) {
+                e.preventDefault();
+                var page = $(this).attr("href");
+                $("#centerPage").load(page);
 
 
+                });
+                });
+
+
+
+                 $("#centerPage").on("click", "#loginButton", function() {
+        login();
+
+      });
+
+});
+
+
+
+</script>
 
 
 </body>
