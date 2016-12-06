@@ -5,8 +5,9 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
     <link rel="stylesheet" href="jsBootstraps/dataTables.bootstrap.min.js">
+    <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
+
 
 
 
@@ -18,7 +19,7 @@
 
 
 
-<nav class="navbar navbar-inverse" id="navBar">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -27,19 +28,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brugtbogsbørsen</a>
+            <a class="navbar-brand" href="index.html">Brugtbogsbørsen</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Bøger til salg <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Bøger der kan sælges</a></li>
-                <li><a href="#">Opret bruger</a></li>
+            <ul class="nav navbar-nav" id="navIndexViewBar">
+
+
+                <li><a href="html/centerIndex.html #ads">Bøger til salg <span class="sr-only">(current)</span></a></li>
+                <li><a href="html/centerIndex.html #viewAllBooks">Bøger der kan sælges</a></li>
+                <li><a href="html/centerIndex.html #newUser">Opret bruger</a></li>
 
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="html/centerIndex.html  #loginFunction">Log ind for at købe brugte bøger</a></li>
+                <li><a href="html/centerIndex.html #loginMenu">Log ind for at købe brugte bøger</a></li>
             </ul>
         </div>
     </div>
@@ -50,13 +53,18 @@
 <div class="jumbotron" id="centerPage">
     <h1>Brugtbogsbørsen</h1>
     <p>  Velkommen til bogsalg for HA-it studerende</p>
-    <p><a class="btn btn-primary btn-lg">Kom i gang med at sælge eller købe bøger</a></p>
+    <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe bøger</a></p>
 </div>
 
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
 <script src="jsBootstraps/bootstrap.js"></script>
+<script src="jsBootstraps/dataTables.bootstrap.min.js"></script>
+<script src="jsBootstraps/jquery.dataTables.min.js"></script>
 <script src="jsBootstraps/bootstrap.min.js"></script>
 <script src="js/login.js"></script>
+<script src="js/listBooks.js"></script>
+<script src="js/listAds.js"></script>
+<script src="js/newUser.js"></script>
 
 
 
@@ -65,21 +73,31 @@
     $(document).ready(function() {
 
                 $(function () {
-                $("#navBar a").on("click", function (e) {
+                $("#navIndexViewBar a").on("click", function (e) {
                 e.preventDefault();
                 var page = $(this).attr("href");
                 $("#centerPage").load(page);
-
-
                 });
                 });
 
+                 $("#centerPage").on("click", "#loginButton", function() {login();
 
 
-                 $("#centerPage").on("click", "#loginButton", function() {
-        login();
+                 });
 
-      });
+                $("#centerPage").on("click", "#listBooks", function() {
+            listBooks();
+        });
+
+                $("#centerPage").on("click", "#ads", function() {
+            listAds();
+        });
+
+        $("#centerPage").on("click", "#newUserButton", function() {
+            newUser();
+        });
+
+
 
 });
 
