@@ -9,20 +9,17 @@
     <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
 
 
-
-
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
 
-
-
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-2">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -34,14 +31,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav" id="navIndexViewBar">
 
-
                 <li><a href="html/centerIndex.html #ads">Bøger til salg <span class="sr-only">(current)</span></a></li>
                 <li><a href="html/centerIndex.html #viewAllBooks">Bøger der kan sælges</a></li>
                 <li><a href="html/centerIndex.html #newUser">Opret bruger</a></li>
 
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id="navIndexViewBar">
                 <li><a href="html/centerIndex.html #loginMenu">Log ind for at købe brugte bøger</a></li>
             </ul>
         </div>
@@ -49,11 +45,11 @@
 </nav>
 
 
-
 <div class="jumbotron" id="centerPage">
     <h1>Brugtbogsbørsen</h1>
-    <p>  Velkommen til bogsalg for HA-it studerende</p>
-    <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe bøger</a></p>
+    <p> Velkommen til bogsalg for HA-it studerende</p>
+    <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe
+        bøger</a></p>
 </div>
 
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
@@ -67,40 +63,36 @@
 <script src="js/newUser.js"></script>
 
 
+<script type="text/javascript">
 
-<script type="text/javascript" >
+    $(document).ready(function () {
 
-    $(document).ready(function() {
-
-                $(function () {
-                $("#navIndexViewBar a").on("click", function (e) {
+        $(function () {
+            $("#navIndexViewBar a").on("click", function (e) {
                 e.preventDefault();
                 var page = $(this).attr("href");
                 $("#centerPage").load(page);
-                });
-                });
+            });
+        });
 
-                 $("#centerPage").on("click", "#loginButton", function() {login();
+        $("#centerPage").on("click", "#loginButton", function () {
+            login();
+        });
 
-
-                 });
-
-                $("#centerPage").on("click", "#listBooks", function() {
+        $("#centerPage").on("click", "#listBooks", function () {
             listBooks();
         });
 
-                $("#centerPage").on("click", "#ads", function() {
+        $("#centerPage").on("click", "#ads", function () {
             listAds();
         });
 
-        $("#centerPage").on("click", "#newUserButton", function() {
+        $("#centerPage").on("click", "#newUserButton", function () {
             newUser();
         });
 
 
-
-});
-
+    });
 
 
 </script>

@@ -3,32 +3,36 @@
  */
 
 
-function listAds(){
+function listAds() {
+
+    console.log("Test");
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:8000/getads",
+        url: "https://localhost:8000/getallads",
         dataType: "json",
 
-        success: function(data) {
+        success: function (data) {
 
-            $("#adsTableBody").dataTable({
+            $("#adsTableBody").DataTable({
                 data: data,
                 processing: true,
                 bDestroy: true,
                 columns: [
-                    { data : "adId" },
-                    { data : "userUsername" },
-                    { data : "isbn" },
-                    { data : "bookTitle" },
-                    { data : "bookAuthor" },
-                    { data : "bookEdition" },
-                    { data : "rating" },
-                    { data : "price" }
+                    {data: "adId"},
+                    {data: "userUsername"},
+                    {data: "isbn"},
+                    {data: "bookTitle"},
+                    {data: "bookAuthor"},
+                    {data: "bookEdition"},
+                    {data: "rating"},
+                    {data: "price"}
                 ]
             });
         },
-
-        error: function(data) { alert("Failure"); alert(JSON.stringify(data)); }
+        error: function (data) {
+            alert("Failure");
+            alert(JSON.stringify(data));
+        }
     });
 }

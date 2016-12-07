@@ -19,6 +19,9 @@ function login(){
 
         success: function(data) { alert("Success");
 
+            console.log("Data: " + JSON.stringify(data));
+
+
             // Når logges ind, skal der skelnes mellem 1 = aministrator, 0 = brugere.
 
             if (data.type == 1)
