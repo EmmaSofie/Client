@@ -21,6 +21,7 @@ function login(){
 
             console.log("Data: " + JSON.stringify(data));
 
+            localStorage.setItem("userIDName", data.username);
 
             // Når logges ind, skal der skelnes mellem 1 = aministrator, 0 = brugere.
 

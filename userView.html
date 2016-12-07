@@ -31,8 +31,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav" id="navUserViewBar">
                 <li class="active"><a href="#">Bøger tilsalg <span class="sr-only">(current)</span></a></li>
-                <li><a href="/html/centerUser.html #test">Sælg bøger</a></li>
-                <li><a href="/html/centerUser.html #updateCurrentUser">Opdater profil</a></li>
+                <li><a href="html/centerUser.html #test">Sælg bøger</a></li>
+                <li><a href="html/centerUser.html #updateCurrentUser">Opdater profil</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
 
@@ -57,7 +57,7 @@
 <script src="jsBootstraps/bootstrap.min.js"></script>
 <script src="js/logout.js"></script>
 <script src="js/updateuser.js"></script>
-
+<script src="js/login.js"></script>
 
 <script type="text/javascript">
 
@@ -74,6 +74,10 @@
         });
 
         $("#centerPageUserView").on("click", "#updateUserButton", function () {
+            updateUser();
+        });
+
+        $("#centerPageUserView").on("click", "#sellBookUser", function () {
             updateUser();
         });
 
