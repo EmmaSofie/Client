@@ -6,5 +6,123 @@
 </head>
 <body>
 
+<div id="viewAllUsers">
+    <form class="form">
+        <div class="form-group form-group-md">
+
+            <div class="form-group">
+                <input type="button" id="ListAllUsers" class="btn btn-primary" value="Hent brugerliste"/>
+            </div>
+
+            <div class="form-group">
+                <table id="userList" class="table table-striped table-bordered table table-hover"
+                       width="100%">
+                    <thead>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Adresse</th>
+                    <th>Telefon</th>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<div id="sellBookAsAdmin">
+    <form class="form">
+        <div class="form-group form-group-md">
+
+            <div class="form-group">
+                <label class="control-label">ISBN:</label>
+                <input type="text" class="form-control" id="isbn"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Title:</label>
+                <input type="text" class="form-control" id="title"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Udgave:</label>
+                <input type="text" class="form-control" id="edition"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Forfatter:</label>
+                <input type="text" class="form-control" id="author"/>
+            </div>
+
+            <div class="form-group">
+                <input type="button" id="sellBookUser" class="btn btn-primary" value="Sælg Bog"/>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<div id="adsAdmin">
+    <form class="form">
+        <div class="form-group form-group-md">
+            <div class="form-group">
+                <table id="adsTableBodyAdmin" class="table table-striped table-bordered table table-hover" width="100%">
+                    <thead>
+                    <th>Annonce ID</th>
+                    <th>Bruger ID</th>
+                    <th>ISBN</th>
+                    <th>Pris</th>
+                    <th>Stand</th>
+                    <th>Forfatter</th>
+                    <th>Slettet</th>
+                    <th>Låst</th>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <input type="button" id="listAdsAdmin" class="btn btn-primary" value="Her er annoncerne"/>
+        </div>
+        <div class="form-group">
+            <input id="resID" type="text" placeholder="Indtast annonce ID"
+                   class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="button" id="reserveBook" class="btn btn-primary" value="Reserver bogen"/>
+        </div>
+    </form>
+</div>
+
+<div id="createAd">
+    <form class="form">
+        <div class="form-group form-group-md">
+            <div class="form-group">
+                <label class="control-label">ISBN:</label>
+                <input type="number" class="form-control" id="isbn"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Stand:</label>
+                <input type="number" class="form-control" id="rating"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Pris:</label>
+                <input type="number" class="form-control" id="price"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Kommentar:</label>
+                <input type="text" class="form-control" id="comment"/>
+            </div>
+
+            <div class="form-group">
+                <input type="button" id="createAnAd" class="btn btn-primary" value="Opret Annonce"/>
+            </div>
+
+        </div>
+    </form>
+</div>
 </body>
 </html>

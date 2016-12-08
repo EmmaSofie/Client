@@ -11,18 +11,23 @@
         <div class="form-group form-group-md">
 
             <div class="form-group">
-                <label class="control-label">Stand:</label>
-                <input type="text" class="form-control" id="condition"/>
+                <label class="control-label">ISBN:</label>
+                <input type="text" class="form-control" id="isbn"/>
             </div>
 
             <div class="form-group">
-                <label class="control-label">Kommentar:</label>
-                <input type="text" class="form-control" id="comment"/>
+                <label class="control-label">Title:</label>
+                <input type="text" class="form-control" id="title"/>
             </div>
 
             <div class="form-group">
-                <label class="control-label">Pris:</label>
-                <input type="number" class="form-control" id="price"/>
+                <label class="control-label">Udgave:</label>
+                <input type="text" class="form-control" id="edition"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Forfatter:</label>
+                <input type="text" class="form-control" id="author"/>
             </div>
 
             <div class="form-group">
@@ -83,8 +88,30 @@
 
 </div>
 
-<div id="test">
-    <p>Test</p>
+<div id="ads">
+
+    <form class="form">
+        <div class="form-group form-group-md">
+            <div class="form-group">
+                <table id="adsUserTableBody" class="table table-striped table-bordered table table-hover" width="100%">
+                    <thead>
+                    <th>Annonce ID</th>
+                    <th>Bruger ID</th>
+                    <th>ISBN</th>
+                    <th>Pris</th>
+                    <th>Stand</th>
+                    <th>Kommentar</th>
+                    <th>Slettet</th>
+                    <th>Låst</th>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <input type="button" id="listAds" class="btn btn-primary" value="Her er annoncerne"/>
+        </div>
+    </form>
 </div>
 
 

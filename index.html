@@ -14,42 +14,50 @@
 </head>
 <body>
 
-
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-2">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">Brugtbogsbørsen</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav" id="navIndexViewBar">
-
                 <li><a href="html/centerIndex.html #ads">Bøger til salg <span class="sr-only">(current)</span></a></li>
                 <li><a href="html/centerIndex.html #viewAllBooks">Bøger der kan sælges</a></li>
-                <li><a href="html/centerIndex.html #newUser">Opret bruger</a></li>
-
             </ul>
 
-            <ul class="nav navbar-nav navbar-right" id="navIndexViewBar">
-                <li><a href="html/centerIndex.html #loginMenu">Log ind for at købe brugte bøger</a></li>
-            </ul>
-        </div>
-    </div>
+            <form class="navbar-form navbar-right" id="navIndexViewBar">
+                <div class="form-group">
+                    <input id="usernameField" type="text" placeholder="Brugernavn"
+                           class="form-control">
+                </div>
+                <div class="form-group">
+                    <input id="passwordField" type="password" placeholder="Kodeord"
+                           class="form-control">
+                </div>
+                <button onclick="login()" class="btn btn-success" type="button">Log ind</button>
+                <a href="html/centerIndex.html #newUser" class="btn btn-primary">Opret Bruger</a>
+
+            </form>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 
-
-<div class="jumbotron" id="centerPage">
-    <h1>Brugtbogsbørsen</h1>
-    <p> Velkommen til bogsalg for HA-it studerende</p>
-    <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe
-        bøger</a></p>
+<div class="container" id="centerPage" style="margin-top: 10px;">
+    <div class="jumbotron">
+        <h1>Brugtbogsbørsen</h1>
+        <p> Velkommen til bogsalg for HA-it studerende</p>
+        <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe
+            bøger</a></p>
+    </div>
 </div>
 
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
@@ -90,7 +98,6 @@
         $("#centerPage").on("click", "#newUserButton", function () {
             newUser();
         });
-
 
     });
 

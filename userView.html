@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
     <link rel="stylesheet" href="jsBootstraps/dataTables.bootstrap.min.js">
+    <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
 
 
     <meta charset="UTF-8">
@@ -14,50 +13,56 @@
 </head>
 <body>
 
-
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-2">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Brugtbogsbørsen</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav" id="navUserViewBar">
-                <li class="active"><a href="#">Bøger tilsalg <span class="sr-only">(current)</span></a></li>
-                <li><a href="html/centerUser.html #test">Sælg bøger</a></li>
+                <li class="active"><a href="html/centerUser.html #ads">Bøger tilsalg <span
+                        class="sr-only">(current)</span></a></li>
+                <li><a href="html/centerUser.html #sellBookAsUser">Sælg bøger</a></li>
                 <li><a href="html/centerUser.html #updateCurrentUser">Opdater profil</a></li>
+
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+
+            <form class="navbar-form navbar-right" id="navUserViewBar">
+                <button onclick="logout()" class="btn btn-success" type="button">Logud</button>
 
             </form>
-            <ul class="nav navbar-nav navbar-right" id="navUserViewBar">
-                <li><a href="#" id="logoutFunction">Log ud af brugtbogsbørsen</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
-<div class="jumbotron" id="centerPageUserView">
-    <h1>Brugtbogsbørsen</h1>
-    <p> Velkommen til bogsalg for HA-it studerende</p>
-    <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe
-        bøger</a></p>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container" id="centerPageUserView" style="margin-top: 10px">
+    <div class="jumbotron">
+        <h1>Brugtbogsbørsen</h1>
+        <p> Velkommen til bogsalg for HA-it studerende</p>
+        <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe
+            bøger</a></p>
+    </div>
 </div>
 
 
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
 <script src="jsBootstraps/bootstrap.js"></script>
+<script src="jsBootstraps/dataTables.bootstrap.min.js"></script>
+<script src="jsBootstraps/jquery.dataTables.min.js"></script>
 <script src="jsBootstraps/bootstrap.min.js"></script>
 <script src="js/logout.js"></script>
 <script src="js/updateuser.js"></script>
 <script src="js/login.js"></script>
+<script src="js/sellBook.js"></script>
+<script src="js/listAds.js"></script>
 
 <script type="text/javascript">
 
@@ -69,7 +74,6 @@
                 var page = $(this).attr("href");
                 $("#centerPageUserView").load(page);
 
-
             });
         });
 
@@ -78,13 +82,17 @@
         });
 
         $("#centerPageUserView").on("click", "#sellBookUser", function () {
-            updateUser();
+            sellBook();
         });
 
 
         $("#logoutFunction").click(function () {
             logout();
 
+        });
+
+        $("#centerPageUserView").on("click", "#listAds", function () {
+            listAds();
         });
 
 

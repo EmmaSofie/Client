@@ -25,6 +25,8 @@ function updateUser() {
 
     console.log("UserIDddd: " + localStorage.getItem("userIDName"));
 
+    document.getElementById("myText").value = "Johnny Bravo";
+
     $.ajax({
         type: "POST",
         url: "https://localhost:8000/updateuser",

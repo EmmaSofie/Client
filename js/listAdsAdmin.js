@@ -1,10 +1,8 @@
 /**
- * Created by EmmaSofie on 05/12/2016.
+ * Created by EmmaSofie on 08/12/2016.
  */
 
-/* Creating HTTP call.  */
-
-function listAds() {
+function listAdsAdmin() {
 
     console.log("Test");
 
@@ -15,11 +13,9 @@ function listAds() {
 
         success: function (data) {
 
-            /* Creating table based upon the received data.
-            "Data" is the data in the table and "adID" etc. is the field, which is returned from backend
-            for the purpose of inserting the wanted into the table. */
+            console.log("Data: " + JSON.stringify(data));
 
-            $("#adsTableBody").DataTable({
+            $("#adsTableBodyAdmin").DataTable({
                 data: data,
                 processing: true,
                 bDestroy: true,
