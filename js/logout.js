@@ -13,10 +13,9 @@ function logout(){
 
         success: function(data) { alert("Success");
 
-            console.log("Aber");
         window.location.replace("index.html");
 
-            alert(JSON.stringify(data));
+            alert("Du logges nu ud, og bliver først tilbage til startsiden");
             console.log(JSON.stringify(data));
 
         },

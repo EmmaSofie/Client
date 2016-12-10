@@ -6,8 +6,6 @@
 
 function listAds() {
 
-    console.log("Test");
-
     $.ajax({
         type: "GET",
         url: "https://localhost:8000/getallads",

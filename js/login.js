@@ -22,24 +22,25 @@ function login() {
         }),
 
         success: function (data) {
-            alert("Success");
 
-            console.log("Data: " + JSON.stringify(data));
+
 
             localStorage.setItem("userIDName", JSON.stringify(data));
 
-            // Når logges ind, skal der skelnes mellem 1 = aministrator, 0 = brugere.
+            // Når der logges ind, skal der skelnes mellem 1 = aministrator, 0 = brugere.
 
             if (data.type == 1) {
                 window.location.href = "adminView.html"
+                alert("Du logges nu ind som administrator!");
             }
             else {
                 window.location.href = "userView.html"
+                alert("Tillykke, du kan nu sælge eller købe dine bøger!");
             }
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data))
+            alert("Du har desværre ikke indtastet korrekt brugernavn og/eller kodeord");
+
         }
     });
 }
