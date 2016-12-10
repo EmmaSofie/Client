@@ -27,8 +27,8 @@ function listBooks() {
             });
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data));
+            alert("Fejl i indlæsningen af data! Prøv venligst igen!");
+
         }
     });
 }

@@ -34,7 +34,7 @@ function listAds() {
             });
         },
         error: function (data) {
-            alert("Failure");
+            alert("Der skete en fejl i indlæsningen af data, prøv venligst igen!");
             alert(JSON.stringify(data));
         }
     });

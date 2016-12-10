@@ -44,12 +44,12 @@ function updateUser() {
         }),
 
         success: function (data) {
-            alert("Success");
-            alert(JSON.stringify(data))
+            alert("Dine oplysninger er nu opdaterede!");
+
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data))
+            alert("Ups - noget gik galt! Det lykkedes desværre ikke at opdatere dine oplysninger. Prøv igen!");
+
         }
     });
 }

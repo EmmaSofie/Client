@@ -32,8 +32,8 @@ function listAdsAdmin() {
             });
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data));
+            alert("Der skete en fejl i indlæsningen af data, prøv venligst igen!");
+
         }
     });
 }

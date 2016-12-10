@@ -8,8 +8,6 @@ function createAd() {
     var price = $("#price").val();
     var isbn = $("#isbn").val();
 
-    console.log("Du er her!");
-
     $.ajax({
         type: "POST",
         url: "https://localhost:8000/createaad",
@@ -23,12 +21,12 @@ function createAd() {
         }),
 
         success: function (data) {
-            alert("Success");
-            alert(JSON.stringify(data))
+            alert("Den er nu oprettet!");
+
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data))
+            alert("Der skete en fejl, prøv venligst igen!");
+
         }
     });
 }

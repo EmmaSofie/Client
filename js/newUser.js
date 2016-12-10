@@ -26,7 +26,7 @@ function newUser() {
             "transfer" : transfer
         }),
 
-        success: function(data) { alert("Success"); alert(JSON.stringify(data)) },
-        error: function(data) { alert("Failure"); alert(JSON.stringify(data)) }
+        success: function(data) { alert("Din bruger er nu oprettet, og du kan nu logge ind med dine indtastede oplysninger"); },
+        error: function(data) { alert("Ups - noget gik galt! Prøv igen, husk at udfylde alle felter"); }
     });
 }

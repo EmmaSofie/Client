@@ -18,10 +18,11 @@ function reserveBook() {
         }),
 
         success: function (data) {
+            alert("Du har nu reserveret bogen.")
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data))
+            alert("Det lykkedes desværre ikke at reservere bogen, prøv venligst igen!");
+
         }
     });
 }

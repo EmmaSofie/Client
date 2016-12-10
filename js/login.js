@@ -35,7 +35,7 @@ function login() {
             }
             else {
                 window.location.href = "userView.html"
-                alert("Tillykke, du kan nu sælge eller købe dine bøger!");
+                alert("Tillykke, du kan nu sælge eller købe studiebøger!");
             }
         },
         error: function (data) {

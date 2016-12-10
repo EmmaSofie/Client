@@ -9,7 +9,6 @@ function sellBook() {
     var edition = $("#edition").val();
     var isbn = $("#isbn").val();
 
-    console.log("Du er her!");
 
     $.ajax({
         type: "POST",
@@ -24,12 +23,12 @@ function sellBook() {
         }),
 
         success: function (data) {
-            alert("Success");
-            alert(JSON.stringify(data))
+            alert("Din bog er nu sat tilsalg!");
+
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data))
+            alert("Din bog blev ikke oprette - prøv venligst igen!");
+
         }
     });
 }

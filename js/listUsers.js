@@ -26,8 +26,7 @@ function listAllUsers() {
             });
         },
         error: function (data) {
-            alert("Failure");
-            alert(JSON.stringify(data));
+            alert("Fejl i indlæsningen af data, prøv venlist igen!");
         }
     });
 }
