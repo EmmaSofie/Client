@@ -5,8 +5,6 @@
 
 function listBooks() {
 
-    console.log("Test");
-
     $.ajax({
         type: "GET",
         url: "https://localhost:8000/getbooks",
