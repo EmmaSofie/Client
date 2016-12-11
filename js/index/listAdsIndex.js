@@ -13,7 +13,7 @@ function listAdsUser() {
 
         success: function (data) {
 
-            $('#adsTableBodyUser').dataTable({
+            $('#adsTableBodyIndex').dataTable({
                 data: data,
                 bDestroy: true,
                 columns: [
@@ -24,19 +24,19 @@ function listAdsUser() {
                         data: "rating", render: function (data) {
                         switch (JSON.stringify(data)) {
                             case '1' :
-                                return '*'
+                                return '*';
                                 break;
                             case '2' :
-                                return '**'
+                                return '**';
                                 break;
                             case '3' :
-                                return '***'
+                                return '***';
                                 break;
                             case '4' :
-                                return '****'
+                                return '****';
                                 break;
                             case '5' :
-                                return '*****'
+                                return '*****';
                                 break;
                         }
                     }

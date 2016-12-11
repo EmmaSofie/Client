@@ -30,11 +30,11 @@ function login() {
             // Når der logges ind, skal der skelnes mellem 1 = aministrator, 0 = brugere.
 
             if (data.type == 1) {
-                window.location.href = "adminView.html"
+                window.location.href = "adminView.html";
                 alert("Du logges nu ind som administrator!");
             }
             else {
-                window.location.href = "userView.html"
+                window.location.href = "userView.html";
                 alert("Tillykke, du kan nu sælge eller købe studiebøger!");
             }
         },

@@ -5,37 +5,43 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="jsBootstraps/dataTables.bootstrap.min.js">
     <link rel="stylesheet" href="jsBootstraps/jquery.dataTables.min.js">
+    <link rel="stylesheet" href="jsBootstraps/dataTables.bootstrap.min.js">
+    <link rel="stylesheet" href="css/index.css">
 
 
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mainpage</title>
 </head>
-<body>
-
-
+<body >
 
 
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
+
             <a class="navbar-brand" href="index.html">Brugtbogsbørsen</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
+
+
+
+            <!-- Main navBar start -->
             <ul class="nav navbar-nav" id="navIndexViewBar">
-                <li><a href="html/centerIndex.html #ads" onclick="listAdsUser()">Bøger til salg <span class="sr-only">(current)</span></a></li>
+
+
+                <li><a href="html/centerIndex.html #ads" onclick="listAdsUser()">Bøger til salg <span class="sr-only">(current)</span></a>
+                </li>
+
+
                 <li><a href="html/centerIndex.html #viewAllBooks" onclick="listBooks()">Bøger der kan sælges</a></li>
             </ul>
+            <!-- Main navBar end -->
 
+
+            <!-- NavBar right start -->
             <form class="navbar-form navbar-right" id="navIndexViewBar">
                 <div class="form-group">
                     <input id="usernameField" type="text" placeholder="Brugernavn"
@@ -49,26 +55,21 @@
                 <a href="html/centerIndex.html #newUser" class="btn btn-primary">Opret Bruger</a>
 
             </form>
+            <!-- NavBar right end -->
 
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
-
-
-
 
 
 <div class="container" id="centerPage" style="margin-top: 10px;">
     <div class="jumbotron">
         <h1>Brugtbogsbørsen</h1>
         <p> Velkommen til bogsalg for HA-it studerende</p>
-        <p><a class="btn btn-primary btn-lg" href="html/centerIndex.html #newUser">Kom i gang med at sælge eller købe
+        <p><a class="btn btn-primary btn-lg" id="newUserMain">Kom i gang med at sælge eller købe
             bøger</a></p>
     </div>
 </div>
-
-
-
 
 
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
@@ -79,7 +80,7 @@
 <script src="js/login.js"></script>
 <script src="js/index/listBooks.js"></script>
 <script src="js/index/newUser.js"></script>
-<script src="js/index/listAdsUser.js"></script>
+<script src="js/index/listAdsIndex.js"></script>
 
 
 <script type="text/javascript">
@@ -98,9 +99,11 @@
             login();
         });
 
-
         $("#centerPage").on("click", "#newUserButton", function () {
             newUser();
+        });
+        $("#centerPage").on("click", "#newUserMain", function () {
+            $("#centerPage").load("html/centerIndex.html #newUser");
         });
 
     });
