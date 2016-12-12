@@ -24,6 +24,6 @@ function logout(){
         error: function(data) { alert("Upps, noget gik galt, luk browseren for at være sikret du er logget ud.");
 
             console.log(JSON.stringify(data));
-        } // prøv at kør det her prøv igen
+        }
     });
 }

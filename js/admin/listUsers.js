@@ -9,6 +9,7 @@ function listAllUsers() {
         type: "GET",
         url: "https://localhost:8000/getusers",
         dataType: "json",
+        xhrFields: {withCredentials: true},
 
         success: function (data) {
 
@@ -18,10 +19,10 @@ function listAllUsers() {
                 bDestroy: true,
                 columns: [
                     {data: "userId"},
-                    {data: "Username"},
-                    {data: "E-mail"},
-                    {data: "Adresse"},
-                    {data: "Telefon"}
+                    {data: "username"},
+                    {data: "email"},
+                    {data: "address"},
+                    {data: "phonenumber"}
                 ]
             });
         },

@@ -5,8 +5,9 @@
 function createAd() {
     var rating = +$("#rating").val();
     var comment = $("#comment").val();
-    var price = +$("#price").val();
     var isbn = +$("#isbn").val();
+    var price = +$("#price").val();
+
 
     $.ajax({
         type: "POST",
@@ -20,7 +21,7 @@ function createAd() {
             "comment": comment
         }),
 
-        success: function (data) {
+        success: function () {
             alert("Den er nu oprettet!");
             location.reload();
 
