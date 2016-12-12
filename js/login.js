@@ -38,7 +38,7 @@ function login() {
                 alert("Tillykke, du kan nu sælge eller købe studiebøger!");
             }
         },
-        error: function (data) {
+        error: function () {
             alert("Du har desværre ikke indtastet korrekt brugernavn og/eller kodeord");
 
         }

@@ -29,7 +29,7 @@ function listAds() {
                     {data: "rating"},
                     {data: "bookTitle"},
                     {data: "bookAuthor"},
-                    {data: "bookEdition"},
+                    {data: "bookEdition"}
 
 
 

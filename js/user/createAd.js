@@ -3,11 +3,12 @@
  */
 
 function createAd() {
-    var rating = +$("#rating").val();
-    var comment = $("#comment").val();
-    var isbn = +$("#isbn").val();
-    var price = +$("#price").val();
+    var rating = +$("#ratingNewAd").val();
+    var comment = $("#commentNewAd").val();
+    var isbn = +$("#isbnNewAd").val();
+    var price = +$("#priceNewAd").val();
 
+    console.log("hey tjek")
 
     $.ajax({
         type: "POST",

@@ -19,12 +19,12 @@ function deleteUser() {
         }),
 
 
-        success: function (data) {
+        success: function () {
             alert("Brugeren bliver nu slettet fra systemet");
         },
 
 
-        error: function (data) {
+        error: function () {
             alert("Den valgte bruger kunne ikke slettes");
         }
     });

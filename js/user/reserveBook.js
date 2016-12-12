@@ -17,10 +17,10 @@ function reserveBook() {
             "id": adID
         }),
 
-        success: function (data) {
+        success: function () {
             alert("Du har nu reserveret bogen.")
         },
-        error: function (data) {
+        error: function () {
             alert("Det lykkedes desværre ikke at reservere bogen, prøv venligst igen!");
 
         }

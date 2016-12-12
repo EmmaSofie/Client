@@ -22,11 +22,11 @@ function newBook() {
             "author": author
         }),
 
-        success: function (data) {
+        success: function () {
             alert("Din bog er nu sat tilsalg!");
 
         },
-        error: function (data) {
+        error: function () {
             alert("Din bog blev ikke oprette - prøv venligst igen!");
 
         }

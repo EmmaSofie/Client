@@ -18,13 +18,13 @@ function listUsersReservations() {
                     {data: "timestamp"},
                     {data: "bookIsbn"},
                     {data: "userUsername"},
-                    {data: "userPhonenumber"},
+                    {data: "userPhonenumber"}
 
                 ]
             });
 
         },
-        error: function (data) {
+        error: function () {
             alert("Hov du har stadig ikke reseveret nogen annoncer!");
             location.reload();
         }
