@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <title>Mainpage</title>
 </head>
-<body >
+<body>
 
-
+<!-- Index NavBar start -->
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
     <div class="container">
         <div class="navbar-header">
@@ -27,7 +27,7 @@
 
 
 
-            <!-- Main navBar start -->
+            <!-- Left NavBar start -->
             <ul class="nav navbar-nav" id="navIndexViewBar">
 
 
@@ -37,10 +37,10 @@
 
                 <li><a href="html/centerIndex.html #viewAllBooks" onclick="listBooks()">Bøger der kan sælges</a></li>
             </ul>
-            <!-- Main navBar end -->
+            <!-- Left NavBar end -->
 
 
-            <!-- NavBar right start -->
+            <!-- Right NavBar start -->
             <form class="navbar-form navbar-right" id="navIndexViewBar">
                 <div class="form-group">
                     <input id="usernameField" type="text" placeholder="Brugernavn"
@@ -54,11 +54,14 @@
                 <a href="html/centerIndex.html #newUser" class="btn btn-primary">Opret Bruger</a>
 
             </form>
-            <!-- NavBar right end -->
+            <!-- Right NavBar end -->
 
         </div>
     </div>
 </nav>
+<!-- Index NavBar end -->
+
+
 
 <!-- CenterPage start -->
 <div class="container" id="centerPage" style="margin-top: 10px;">
@@ -72,7 +75,7 @@
 <!-- CenterPage end -->
 
 
-
+<!-- Source for index scripts start -->
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
 <script src="jsBootstraps/bootstrap.js"></script>
 <script src="jsBootstraps/dataTables.bootstrap.min.js"></script>
@@ -82,8 +85,11 @@
 <script src="js/index/listBooks.js"></script>
 <script src="js/index/newUser.js"></script>
 <script src="js/index/listAdsIndex.js"></script>
+<!-- Source for index scripts end -->
 
 
+
+<!-- jQuery  loaderIndex Start -->
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -111,6 +117,9 @@
 
 
 </script>
+
+
+<!-- jQuery  loaderIndex end -->
 
 
 </body>

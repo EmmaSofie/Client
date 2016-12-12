@@ -4,11 +4,10 @@
 
 function listAllUsers() {
 
-    console.log("Test");
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8000/getusers",
+        url: "https://localhost:8000/getusers",
         dataType: "json",
 
         success: function (data) {
@@ -18,6 +17,7 @@ function listAllUsers() {
                 processing: true,
                 bDestroy: true,
                 columns: [
+                    {data: "userId"},
                     {data: "Username"},
                     {data: "E-mail"},
                     {data: "Adresse"},
@@ -27,6 +27,7 @@ function listAllUsers() {
         },
         error: function (data) {
             alert("Fejl i indlæsningen af data, prøv venlist igen!");
+            alert(JSON.stringify(data));
         }
     });
 }

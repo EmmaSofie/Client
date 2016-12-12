@@ -6,29 +6,6 @@
 </head>
 <body>
 
-<div id="viewAllUsers">
-    <form class="form">
-        <div class="form-group form-group-md">
-
-            <div class="form-group">
-                <input type="button" id="ListAllUsers" class="btn btn-primary" value="Hent brugerliste"/>
-            </div>
-
-            <div class="form-group">
-                <table id="userList" class="table table-striped table-bordered table table-hover"
-                       width="100%">
-                    <thead>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Adresse</th>
-                    <th>Telefon</th>
-                    </thead>
-                </table>
-            </div>
-
-        </div>
-    </form>
-</div>
 
 <div id="sellBookAsAdmin">
     <form class="form">
@@ -75,18 +52,11 @@
                     <th>Stand</th>
                     <th>Forfatter</th>
                     <th>Slettet</th>
-                    <th>Låst</th>
+                    <th>Status</th>
                     </thead>
                 </table>
             </div>
 
-        </div>
-        <div class="form-group">
-            <input id="resID" type="text" placeholder="Indtast annonce ID"
-                   class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="button" id="reserveBook" class="btn btn-primary" value="Reserver bogen"/>
         </div>
     </form>
 </div>
@@ -121,6 +91,54 @@
 
         </div>
     </form>
+</div>
+
+
+
+
+<div id="listUsers">
+    <form class="form">
+
+        <div class="form-group form-group-md">
+
+            <div class="form-group">
+                <table id="userList" class="table table-striped table-bordered table table-hover" width="100%">
+                    <thead>
+                    <th>ID</th>
+                    <th>Brugernavn</th>
+                    <th>Telefonnummer</th>
+                    <th>Addresse</th>
+                    <th>E-mail</th>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+    </form>
+
+
+    <div id="deleteUserAdmin">
+        <form class="form">
+            <div class="form-group form-group-md">
+
+
+                <div class="form-group">
+                    <label class="control-label">Bruger ID:</label>
+                    <input type="text" class="form-control" id="deleteUserID"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="button" id="deleteUserButton" class="btn btn-danger" value="Slet ønsket bruger"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
 </div>
 
 

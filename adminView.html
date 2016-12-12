@@ -14,45 +14,64 @@
 </head>
 <body>
 
+
+
+<!-- Admin navBar start -->
 <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brugtbogsbørsen</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <a class="navbar-brand" href="adminView.html">Brugtbogsbørsen</a>
+
+
+
+
+        <!-- Left NavBar start -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav" id="navAdminViewBar">
                 <li><a href="html/centerAdmin.html #adsAdmin" onclick="listAdsAdmin()">Bøger tilsalg</a></li>
                 <li><a href="html/centerAdmin.html #newBook">Tilføj ny bog</a></li>
-
-
+                <li><a href="html/centerAdmin.html #listUsers" onclick="listAllUsers()">Se brugere</a></li>
             </ul>
 
+        <!-- Left NavBar start -->
+
+
+        <!-- Right NavBar start -->
             <form class="navbar-form navbar-right" id="navAdminViewBar">
-                <button onclick="logout()" class="btn btn-success" type="button">Logud</button>
+                <button onclick="logout()" class="btn btn-danger" type="button">Logud</button>
 
             </form>
+        <!-- Right NavBar start -->
 
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
 
+<!-- Admin navBar end -->
+
+
+
+
+
+
+<!-- CenterPageAdmin start -->
 <div class="container" id="centerPageAdminView" style="margin-top: 10px">
     <div class="jumbotron">
 
         <h1>Velkommen til kære administrator</h1>
         <p>Her kan du administrer brugere af brugtbogsbørsen, samt tilføje nye bøger til annoncer!</p>
-        <p><a class="btn btn-primary btn-lg">Tilføj ny bog</a></p>
+        <p><a class="btn btn-primary btn-lg" id="createNewBook">Tilføj ny bog</a></p>
     </div>
 </div>
+<!-- CenterPageAdmin end -->
 
+
+
+
+
+
+<!-- Source for admin scripts start -->
 
 <script src="jsBootstraps/jquery-3.1.1.min.js"></script>
 <script src="jsBootstraps/bootstrap.js"></script>
@@ -62,11 +81,19 @@
 <script src="js/logout.js"></script>
 <script src="js/admin/listUsers.js"></script>
 <script src="js/listAdsAdmin.js"></script>
-<script src="js/user/reserveBook.js"></script>
 <script src="js/admin/newBook.js"></script>
+<script src="js/admin/deleteUser.js"></script>
 
 
+<!-- Source for admin scripts end -->
+
+
+
+<!-- jQuery  loaderAdmin start -->
 <script type="text/javascript">
+
+
+
 
     $(document).ready(function () {
 
@@ -92,12 +119,16 @@
             listAdsAdmin();
         });
 
-        $("#centerPageAdminView").on("click", "#reserveBook", function () {
-            reserveBook();
-        });
 
         $("#centerPageAdminView").on("click", "#createAnAd", function () {
             createAd();
+        });
+        $("#centerPageAdminView").on("click", "#deleteUserButton", function () {
+            deleteUser();
+        });
+
+        $("#centerPageAdminView").on("click", "#createNewBook", function () {
+            $("#centerPageAdminView").load("html/centerAdmin.html #newBook");
         });
 
 
@@ -107,6 +138,9 @@
         });
 
     });
+
+    <!-- jQuery  loaderAdmin end -->
+
 
 
 </script>
