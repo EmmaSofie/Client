@@ -35,6 +35,7 @@ function updateUser() {
 
         success: function () {
             alert("Dine oplysninger er nu opdaterede!");
+            location.reload();
 
         },
         error: function () {

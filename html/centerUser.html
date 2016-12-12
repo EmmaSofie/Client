@@ -83,30 +83,40 @@
             <div class="form-group">
                 <table id="adsTableBody" class="table table-striped table-bordered table table-hover" width="100%">
                     <thead>
-                    <th>Annonce ID</th>
-                    <th>Bruger ID</th>
+                    <th>ID</th>
+                    <th>Sælger</th>
                     <th>ISBN</th>
                     <th>Pris</th>
                     <th>Stand</th>
-                    <th>Kommentar</th>
-                    <th>Slettet</th>
-                    <th>Låst</th>
+                    <th>Titel</th>
+                    <th>Bogforfatter</th>
+                    <th>Udgave</th>
                     </thead>
                 </table>
             </div>
 
         </div>
     </form>
+
+
+    <div id="reserveAd">
+        <div class="form-group">
+            <input id="resID" type="text" placeholder="Indtast annonce ID"
+                   class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="button" id="reserveBookButton" class="btn btn-primary" value="Reserver bogen"/>
+        </div>
+    </div>
 </div>
 
 
 
-<div id="viewAllBooks">
+<div id="viewAllBooksUser">
     <form class="form">
         <div class="form-group form-group-md">
             <div class="form-group">
-                <table id="booksTableBody" class="table table-striped table-bordered table table-hover"
-                       width="100%">
+                <table id="booksTableBodyUser" class="table table-striped table-bordered table table-hover" width="100%">
                     <thead>
                     <th>ISBN</th>
                     <th>Titel</th>
@@ -121,13 +131,13 @@
 
 
 
-<div id="listUserAds">
+<div id="listUsersAds">
     <form class="form">
         <div class="form-group form-group-md">
 
 
             <div class="form-group">
-                <table id="listUserAdsBody" class="table table-striped table-bordered table table-hover" width="100%">
+                <table id="listUsersAdsBody" class="table table-striped table-bordered table table-hover" width="100%">
                     <thead>
                     <th>ID</th>
                     <th>ISBN</th>
@@ -144,31 +154,138 @@
 
 
 
-    <div id="createAd">
+
+    <div id="removeBuyersBooking">
+        <form class="form">
+            <div class="form-group form-group-md">
+
+                <div class="form-group">
+                    <label class="control-label">Ønsket ID for annonce der skal sættes til salg:</label>
+                    <input type="text" class="form-control" id="removeBookingId"/>
+                </div>
+                <div class="form-group">
+                    <input type="button" id="removeBuyersBookingButton"  class="btn btn-danger" value="Sæt annoncen til salg igen"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div id="deleteUsersAd">
         <form class="form">
             <div class="form-group form-group-md">
                 <div class="form-group">
-                    <label class="control-label">ISBN:</label>
-                    <input type="number" class="form-control" id="isbn"/>
+                    <label class="control-label">Indtast ID for den annonce du ønsker slettet:</label>
+                    <input type="text" class="form-control" id="deleteUsersAdId"/>
+                </div>
+                <div class="form-group">
+                    <input type="button" id="deleteUsersAdButton" class="btn btn-danger" value="Slet din annonce"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div id="updateUsersAd">
+    <form class="form">
+        <div class="form-group form-group-md">
+            <div class="form-group">
+                <label class="control-label">ID for ønsket annnonce der skal opdateres:</label>
+                <input type="text" class="form-control" id="adId"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Ændring af stand:</label>
+                <input type="text" class="form-control" id="newAdRating"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Ændring af kommentar:</label>
+                <input type="text" class="form-control" id="newAdComment"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Pris:</label>
+                <input type="text" class="form-control" id="newAdPrice"/>
+            </div>
+            <div class="form-group">
+                <input type="button" id="updateUsersAdButton" class="btn btn-success" value="Tryk for at gemme oplysningerne"/>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="createAd">
+    <form class="form">
+        <div class="form-group form-group-md">
+            <div class="form-group">
+                <label class="control-label">ISBN:</label>
+                <input type="number" class="form-control" id="isbn"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Stand:</label>
+                <input type="number" class="form-control" id="rating"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Pris:</label>
+                <input type="number" class="form-control" id="price"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Kommentar:</label>
+                <input type="text" class="form-control" id="comment"/>
+            </div>
+
+            <div class="form-group">
+                <input type="button" id="createAdButton" class="btn btn-primary" value="Opret Annonce"/>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+
+
+<div id="listUsersReservations">
+    <form class="form">
+        <div class="form-group form-group-md">
+            <div class="form-group">
+                <table id="listUserReservations" class="table table-striped table-bordered table table-hover" width="100%">
+                    <thead>
+                    <th>Annonce ID</th>
+                    <th>Booking tidspunkt</th>
+                    <th>ISBN</th>
+                    <th>Sælger</th>
+                    <th>Telefonnummer på sælger</th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </form>
+
+
+    <div id="removeUsersReservation">
+        <form class="form">
+            <div class="form-group form-group-md">
+
+                <div class="form-group">
+                    <label class="control-label">Tast ID for den reservation du ikke længere ønsker</label>
+                    <input type="text" class="form-control" id="usersBookingId"/>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Stand:</label>
-                    <input type="number" class="form-control" id="rating"/>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label">Pris:</label>
-                    <input type="number" class="form-control" id="price"/>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label">Kommentar:</label>
-                    <input type="text" class="form-control" id="comment"/>
-                </div>
-
-                <div class="form-group">
-                    <input type="button" id="createAdButton" class="btn btn-primary" value="Opret Annonce"/>
+                    <input type="button" id="removeUsersBookingButton" class="btn btn-danger" value="Fjern reservation"/>
                 </div>
 
             </div>
@@ -176,15 +293,7 @@
     </div>
 
 
-
-    <div class="form-group">
-        <input id="resID" type="text" placeholder="Indtast annonce ID"
-               class="form-control">
-    </div>
-    <div class="form-group">
-        <input type="button" id="reserveBookButton" class="btn btn-primary" value="Reserver bogen"/>
-    </div>
-
+</div>
 
 </body>
 </html>

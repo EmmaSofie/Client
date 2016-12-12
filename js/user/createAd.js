@@ -10,7 +10,7 @@ function createAd() {
 
     $.ajax({
         type: "POST",
-        url: "https://localhost:8000/createaad",
+        url: "https://localhost:8000/createad",
         dataType: "json",
         xhrFields: {withCredentials: true},
         data: JSON.stringify({
@@ -22,6 +22,7 @@ function createAd() {
 
         success: function (data) {
             alert("Den er nu oprettet!");
+            location.reload();
 
         },
         error: function (data) {

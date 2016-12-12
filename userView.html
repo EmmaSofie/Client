@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav" id="navUserViewBar">
-
+                <li><a href="html/centerUser.html #viewAllBooksUser" onclick="listBooks()">Se vores bøger</a></li>
                 <li><a href="html/centerUser.html #ads" onclick="listAds()">Bøger tilsalg <span
                         class="sr-only">(current)</span></a></li>
                 <li><a href="html/centerUser.html #createAd">Sælg bøger</a></li>
-                <li><a href="html/centerUser.html #updateCurrentUser">Opdater profil</a></li>
-                <li><a href="html/centerUser.html #viewAllBooks" onclick="listBooks()">Se vores bøger</a></li>
-                <li><a href="html/centerUser.html #listUserAds" onclick="listUserAds()">Dine oprettet annoncer</a></li>
+                <li><a href="html/centerUser.html #updateCurrentUser">Opdater profil/Slet bruger</a></li>
+                <li><a href="html/centerUser.html #listUsersAds" onclick="listUserAds()">Dine oprettet annoncer</a></li>
+                <li><a href="html/centerUser.html #listUsersReservations" onclick="listUsersReservations()">Reserveret annoncer</a></li>
 
             </ul>
          <!-- Left NavBar end -->
@@ -60,6 +60,7 @@
     </div>
 </nav>
 <!-- User NavBar end -->
+
 
 
 
@@ -88,12 +89,17 @@
 <script src="js/user/updateUser.js"></script>
 <script src="js/login.js"></script>
 <script src="js/admin/newBook.js"></script>
-<script src="js/user/listAds.js"></script>
+<script src="js/user/listAdsUser.js"></script>
 <script src="js/user/deleteCurrentUser.js"></script>
-<script src="js/index/listBooks.js"></script>
+<script src="js/user/listBooksUser.js"></script>
 <script src="js/user/listUserAds.js"></script>
 <script src="js/user/createAd.js"></script>
 <script src="js/user/reserveBook.js"></script>
+<script src="js/user/listUserReservations.js"></script>
+<script src="js/user/removeBuyersBooking.js"></script>
+<script src="js/user/removeUsersBooking.js"></script>
+<script src="js/user/deleteUsersAd.js"></script>
+<script src="js/user/updateUsersAd.js"></script>
 <!-- Source for user scripts end -->
 
 
@@ -137,6 +143,26 @@
         $("#centerPageUserView").on("click", "#reserveBookButton", function () {
             reserveBook();
         });
+
+        $("#centerPageUserView").on("click", "#removeBookingButton", function () {
+            removeBuyersBooking();
+        });
+
+        $("#centerPageUserView").on("click", "#removeBuyersBookingButton", function () {
+            removeBuyersBooking();
+        });
+        $("#centerPageUserView").on("click", "#removeUsersBookingButton", function () {
+            removeUsersBooking();
+        });
+
+        $("#centerPageUserView").on("click", "#deleteUsersAdButton", function () {
+            deleteUsersAd();
+        });
+
+        $("#centerPageUserView").on("click", "#updateUsersAdButton", function () {
+            updateUsersAd();
+        });
+
 
 
     });

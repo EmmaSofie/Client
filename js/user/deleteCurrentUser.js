@@ -11,7 +11,7 @@ function deleteCurrentUser(){
         type: "POST",
         xhrFields: { withCredentials: true },
 
-        success: function(data) {
+        success: function() {
             alert("Din bruger slettes!!");
             alert("Du omstilles til startsiden");
             window.location.href = "index.html";
@@ -19,7 +19,7 @@ function deleteCurrentUser(){
         },
 
 
-        error: function(data) {
+        error: function() {
             alert("Din bruger kan ikke slettes - Prøv igen");
         }
     });

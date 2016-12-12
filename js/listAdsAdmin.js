@@ -4,7 +4,6 @@
 
 function listAdsAdmin() {
 
-    console.log("Test");
 
     $.ajax({
         type: "GET",

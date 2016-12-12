@@ -7,9 +7,8 @@
 function listAds() {
 
     $.ajax({
-
-        url: "https://localhost:8000/getads",
         type: "GET",
+        url: "https://localhost:8000/getads",
         dataType: "json",
 
         success: function (data) {
@@ -26,11 +25,13 @@ function listAds() {
                     {data: "adId"},
                     {data: "userUsername"},
                     {data: "isbn"},
+                    {data: "price"},
+                    {data: "rating"},
                     {data: "bookTitle"},
                     {data: "bookAuthor"},
                     {data: "bookEdition"},
-                    {data: "rating"},
-                    {data: "price"},
+
+
 
                 ]
             });

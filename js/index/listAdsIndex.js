@@ -19,7 +19,9 @@ function listAdsUser() {
                 columns: [
                     {data: "userUsername"},
                     {data: "isbn"},
-                    {data: "price"},
+                    {data: "bookTitle"},
+                    {data: "bookAuthor"},
+                    {data: "bookEdition"},
                     {
                         data: "rating", render: function (data) {
                         switch (JSON.stringify(data)) {
@@ -40,10 +42,15 @@ function listAdsUser() {
                                 break;
                         }
                     }
+
+
+
+
                     },
-                    {data: "bookTitle"},
-                    {data: "bookAuthor"},
-                    {data: "bookEdition"},
+                    {data: "price"}
+
+
+
 
                 ]
             });
@@ -51,6 +58,7 @@ function listAdsUser() {
 
         error: function (data) {
             alert("Der skete en fejl i indlæsningen af data, prøv venligst igen!");
+            alert(JSON.stringify(data));
         }
     });
 }

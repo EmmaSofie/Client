@@ -11,14 +11,13 @@ function listUserAds() {
 
         success: function (data) {
 
-            $("#listUserAdsBody").dataTable({
+            $("#listUsersAdsBody").dataTable({
 
                 data: data,
                 bDestroy: true,
                 columns: [
                     {data: "adId"},
                     {data: "isbn"},
-                    {data: "price"},
                     {
                         data: "rating", render: function (data) {
                         switch (JSON.stringify(data)) {
@@ -40,6 +39,8 @@ function listUserAds() {
                         }
                     }
                     },
+                    {data: "price"},
+
                     {data: "comment"},
                     {
                         data: "locked", render: function (data) {
