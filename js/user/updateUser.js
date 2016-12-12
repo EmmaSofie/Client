@@ -5,16 +5,8 @@
 
 function updateUser() {
 
-    var username = " ";
-    var password = " ";
-    var email = " ";
-    var phonenumber = " ";
-    var address = " ";
-    var mobilepay = " ";
-    var cash = " ";
-    var transfer = " ";
 
-    var username = localStorage.getItem("userIDName");
+    var username = $("#newUsername").val();
     var password = $("#newPassword").val();
     var email = $("#newEmail").val();
     var phonenumber = +$("#newPhonenumber").val();
@@ -23,9 +15,7 @@ function updateUser() {
     var cash = +$("#newCash").prop("checked");
     var transfer = +$("#newTransfer").prop("checked");
 
-    console.log("UserIDddd: " + localStorage.getItem("userIDName"));
 
-    document.getElementById("myText").value = "Johnny Bravo";
 
     $.ajax({
         type: "POST",
@@ -43,11 +33,11 @@ function updateUser() {
             "transfer": transfer
         }),
 
-        success: function (data) {
+        success: function () {
             alert("Dine oplysninger er nu opdaterede!");
 
         },
-        error: function (data) {
+        error: function () {
             alert("Ups - noget gik galt! Det lykkedes desværre ikke at opdatere dine oplysninger. Prøv igen!");
 
         }

@@ -36,9 +36,10 @@
 
                 <li><a href="html/centerUser.html #ads" onclick="listAds()">Bøger tilsalg <span
                         class="sr-only">(current)</span></a></li>
-                <li><a href="html/centerUser.html #sellBookAsUser">Sælg bøger</a></li>
+                <li><a href="html/centerUser.html #createAd">Sælg bøger</a></li>
                 <li><a href="html/centerUser.html #updateCurrentUser">Opdater profil</a></li>
                 <li><a href="html/centerUser.html #viewAllBooks" onclick="listBooks()">Se vores bøger</a></li>
+                <li><a href="html/centerUser.html #listUserAds" onclick="listUserAds()">Dine oprettet annoncer</a></li>
 
             </ul>
             <!-- Main navBar end -->
@@ -82,12 +83,14 @@
 <script src="jsBootstraps/jquery.dataTables.min.js"></script>
 <script src="jsBootstraps/bootstrap.min.js"></script>
 <script src="js/logout.js"></script>
-<script src="js/user/updateuser.js"></script>
+<script src="js/user/updateUser.js"></script>
 <script src="js/login.js"></script>
 <script src="js/admin/newBook.js"></script>
 <script src="js/user/listAds.js"></script>
 <script src="js/user/deleteCurrentUser.js"></script>
 <script src="js/index/listBooks.js"></script>
+<script src="js/user/listUserAds.js"></script>
+<script src="js/user/createAd.js"></script>
 
 <script type="text/javascript">
 
@@ -116,9 +119,6 @@
 
         });
 
-        $("#centerPageUserView").on("click", "#listAds", function () {
-            listAds();
-        });
 
         $("#centerPageUserView").on("click", "#adsForSale", function () {
             $("#centerPageUserView").load("html/centerUser.html #ads");
@@ -126,6 +126,10 @@
 
         $("#centerPageUserView").on("click", "#deleteUserButton", function () {
             deleteCurrentUser();
+        });
+
+        $("#centerPageUserView").on("click", "#createAdButton", function () {
+            createAd();
         });
 
 

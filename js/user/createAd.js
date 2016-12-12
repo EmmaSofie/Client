@@ -3,10 +3,10 @@
  */
 
 function createAd() {
-    var rating = $("#rating").val();
+    var rating = +$("#rating").val();
     var comment = $("#comment").val();
-    var price = $("#price").val();
-    var isbn = $("#isbn").val();
+    var price = +$("#price").val();
+    var isbn = +$("#isbn").val();
 
     $.ajax({
         type: "POST",
@@ -26,7 +26,7 @@ function createAd() {
         },
         error: function (data) {
             alert("Der skete en fejl, prøv venligst igen!");
-
+            alert(JSON.stringify(data));
         }
     });
 }
