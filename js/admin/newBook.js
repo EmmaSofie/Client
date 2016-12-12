@@ -3,7 +3,7 @@
  */
 
 
-function sellBook() {
+function newBook() {
     var title = $("#title").val();
     var author = $("#author").val();
     var edition = $("#edition").val();
