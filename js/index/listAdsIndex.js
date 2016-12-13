@@ -58,7 +58,7 @@ function listAdsUser() {
 
         error: function (data) {
             alert("Der skete en fejl i indlæsningen af data, prøv venligst igen!");
-            alert(JSON.stringify(data));
+
         }
     });
 }

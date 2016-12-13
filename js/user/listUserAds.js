@@ -22,19 +22,19 @@ function listUserAds() {
                         data: "rating", render: function (data) {
                         switch (JSON.stringify(data)) {
                             case '1' :
-                                return '*'
+                                return '*';
                                 break;
                             case '2' :
-                                return '**'
+                                return '**';
                                 break;
                             case '3' :
-                                return '***'
+                                return '***';
                                 break;
                             case '4' :
-                                return '****'
+                                return '****';
                                 break;
                             case '5' :
-                                return '*****'
+                                return '*****';
                                 break;
                         }
                     }
@@ -46,10 +46,10 @@ function listUserAds() {
                         data: "locked", render: function (data) {
                         switch (JSON.stringify(data)) {
                             case '0' :
-                                return 'Ikke reseveret'
+                                return 'Ikke reseveret';
                                 break;
                             case '1' :
-                                return 'Reseveret'
+                                return 'Reseveret';
                                 break;
                         }
                     }

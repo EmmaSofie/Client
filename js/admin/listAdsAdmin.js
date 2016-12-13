@@ -26,10 +26,34 @@ function listAdsAdmin() {
                     {data: "userUsername"},
                     {data: "isbn"},
                     {data: "price"},
-                    {data: "rating"},
+                    {
+                        data: "rating", render: function (data) {
+                        switch (JSON.stringify(data)) {
+                            case '1' :
+                                return '*';
+                                break;
+                            case '2' :
+                                return '**';
+                                break;
+                            case '3' :
+                                return '***';
+                                break;
+                            case '4' :
+                                return '****';
+                                break;
+                            case '5' :
+                                return '*****';
+                                break;
+                        }
+                    }
+
+
+
+
+                    },
                     {data: "bookTitle"},
                     {data: "bookAuthor"},
-                    {data: "bookEdition"},
+                    {data: "bookEdition"}
 
 
 
