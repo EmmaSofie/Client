@@ -32,6 +32,7 @@
                 <li><a href="html/centerAdmin.html #adsAdmin" onclick="listAdsAdmin()">Bøger tilsalg</a></li>
                 <li><a href="html/centerAdmin.html #newBook">Tilføj ny bog</a></li>
                 <li><a href="html/centerAdmin.html #listUsers" onclick="listAllUsers()">Se brugere</a></li>
+                <li><a href="html/centerAdmin.html #listAllBooksAdmin" onclick="listBooksAdmin()">Se oprettet bøger</a></li>
             </ul>
 
         <!-- Left NavBar start -->
@@ -83,7 +84,8 @@
 <script src="js/admin/listAdsAdmin.js"></script>
 <script src="js/admin/newBook.js"></script>
 <script src="js/admin/deleteUser.js"></script>
-
+<script src="js/admin/listBooksAdmin.js"></script>
+<script src="js/admin/deleteBookAdmin.js"></script>
 
 <!-- Source for admin scripts end -->
 
@@ -128,6 +130,10 @@
             $("#centerPageAdminView").load("html/centerAdmin.html #newBook");
         });
 
+
+        $("#centerPageAdminView").on("click", "#deleteBookAdminButton", function () {
+            deleteBookAdmin();
+        });
 
         $("#logoutFunction").click(function () {
             logout();

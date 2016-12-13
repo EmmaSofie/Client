@@ -2,17 +2,20 @@
  * Created by EmmaSofie on 08/12/2016.
  */
 
-function listAdsAdmin() {
+/* Creating HTTP call.  */
 
+function listAdsAdmin() {
 
     $.ajax({
         type: "GET",
-        url: "https://localhost:8000/getallads",
+        url: "https://localhost:8000/getads",
         dataType: "json",
 
         success: function (data) {
 
-            console.log("Data: " + JSON.stringify(data));
+            /* Creating table based upon the received data.
+             "Data" is the data in the table and "adID" etc. is the field, which is returned from backend
+             for the purpose of inserting the wanted into the table. */
 
             $("#adsTableBodyAdmin").DataTable({
                 data: data,
@@ -24,15 +27,19 @@ function listAdsAdmin() {
                     {data: "isbn"},
                     {data: "price"},
                     {data: "rating"},
+                    {data: "bookTitle"},
                     {data: "bookAuthor"},
-                    {data: "deleted"},
-                    {data: "locked"}
+                    {data: "bookEdition"},
+
+
+
+
+
                 ]
             });
         },
         error: function (data) {
-            alert("Der skete en fejl i indlæsningen af data, prøv venligst igen!");
-
+            alert(JSON.stringify(data))
         }
     });
 }

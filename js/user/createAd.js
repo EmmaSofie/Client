@@ -8,7 +8,7 @@ function createAd() {
     var isbn = +$("#isbnNewAd").val();
     var price = +$("#priceNewAd").val();
 
-    console.log("hey tjek")
+    console.log(price);
 
     $.ajax({
         type: "POST",

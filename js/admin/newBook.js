@@ -4,10 +4,10 @@
 
 
 function newBook() {
-    var title = $("#title").val();
-    var author = $("#author").val();
-    var edition = $("#edition").val();
-    var isbn = $("#isbn").val();
+    var title = $("#titleNew").val();
+    var author = $("#authorNew").val();
+    var edition = $("#editionNew").val();
+    var isbn = $("#isbnNew").val();
 
 
     $.ajax({
