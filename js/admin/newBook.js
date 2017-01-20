@@ -23,7 +23,7 @@ function newBook() {
         }),
 
         success: function () {
-            alert("Din bog er nu sat tilsalg!");
+            alert("Bogen er nu oprettet");
 
         },
         error: function () {

@@ -25,6 +25,7 @@ function updateUsersAd() {
         }),
         success: function () {
             alert("Dine ændringer for annoncen lykkedes!");
+            location.reload();
         },
         error: function () {
             alert("Prøv igen");

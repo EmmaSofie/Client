@@ -18,6 +18,7 @@ function removeBuyersBooking() {
         }),
         success: function () {
             alert("Annoncen vil blive sat til salg igen");
+            location.reload();
         },
         error: function () {
             alert("Annoncen er allerede til salg");

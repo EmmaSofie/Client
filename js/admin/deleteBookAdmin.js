@@ -18,7 +18,7 @@ function deleteBookAdmin () {
             location.reload();
         },
         error: function () {
-            alert("Bogen kunne ikke slettes - prøv igen" );
+            alert("Bogen kunne ikke slettes - dette skyldes måske den bruges af bruger" );
         }
     })
 }

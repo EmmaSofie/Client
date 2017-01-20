@@ -21,6 +21,7 @@ function deleteUser() {
 
         success: function () {
             alert("Brugeren bliver nu slettet fra systemet");
+            location.reload();
         },
 
 
