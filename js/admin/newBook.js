@@ -24,6 +24,7 @@ function newBook() {
 
         success: function () {
             alert("Bogen er nu oprettet");
+            $('#centerPageAdminView').load('html/centerAdmin.html #listAllBooksAdmin')
 
         },
         error: function () {

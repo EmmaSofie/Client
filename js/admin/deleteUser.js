@@ -20,8 +20,8 @@ function deleteUser() {
 
 
         success: function () {
-            alert("Brugeren bliver nu slettet fra systemet");
-            location.reload();
+            alert("Brugeren bliver nu slettet fra systemet, du viderestilles til startsiden ");
+            $('#centerPageAdminView').load('html/centerAdmin.html #centerPageAdminView')
         },
 
 

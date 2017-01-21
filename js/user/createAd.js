@@ -24,14 +24,11 @@ function createAd() {
 
         success: function () {
             alert("Den er nu oprettet!");
-            //location.reload();
-
             $('#centerPageUserView').load('html/centerUser.html #listUsersAds')
 
         },
         error: function (data) {
             alert("Der skete en fejl, prøv venligst igen!");
-            alert(JSON.stringify(data));
         }
     });
 }

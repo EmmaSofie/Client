@@ -16,7 +16,8 @@ function deleteUsersAd() {
         }),
         success: function () {
             alert("Din annonce slettes nu helt fra vores database");
-            location.reload();
+            alert("Du vil blive dirigeret hen til at oprette en ny");
+            $('#centerPageUserView').load('html/centerUser.html #createAd')
         },
         error: function () {
             alert("Er du sikker på annoncen, ikke allerede er slettet?");

@@ -27,7 +27,10 @@ function newUser() {
         }),
 
         success: function() { alert("Din bruger er nu oprettet, og du kan nu logge ind med dine indtastede oplysninger");
-            location.reload()},
+            location.reload()
+
+
+        },
         error: function() { alert("Ups - noget gik galt! Prøv igen, husk at udfylde alle felter"); }
     });
 }

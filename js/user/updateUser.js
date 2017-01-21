@@ -35,7 +35,8 @@ function updateUser() {
 
         success: function () {
             alert("Dine oplysninger er nu opdaterede!");
-            location.reload();
+
+            $('#centerPageUserView').load('html/centerUser.html #updateCurrentUser')
 
         },
         error: function () {
