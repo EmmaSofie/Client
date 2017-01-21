@@ -24,7 +24,9 @@ function createAd() {
 
         success: function () {
             alert("Den er nu oprettet!");
-            location.reload();
+            //location.reload();
+
+            $('#centerPageUserView').load('html/centerUser.html #listUsersAds')
 
         },
         error: function (data) {

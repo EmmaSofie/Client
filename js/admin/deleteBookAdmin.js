@@ -15,7 +15,9 @@ function deleteBookAdmin () {
         }),
         success: function () {
             alert("Bogen slettes nu i systemet");
-            location.reload();
+            alert("Du bliver viderestillet til oprettelse af en ny bog");
+            //location.reload();
+            $('#centerPageAdminView').load('html/centerAdmin.html #newBook')
         },
         error: function () {
             alert("Bogen kunne ikke slettes - dette skyldes måske den bruges af bruger" );

@@ -6,7 +6,6 @@ function reserveBook() {
 
     var adID = document.getElementById("resID").value;
 
-    console.log("ADID: " + adID);
 
     $.ajax({
         type: "POST",
@@ -19,6 +18,8 @@ function reserveBook() {
 
         success: function () {
             alert("Du har nu reserveret bogen.")
+            alert("Du kommer til startsiden.")
+            location.reload();
         },
         error: function () {
             alert("Det lykkedes desværre ikke at reservere bogen, prøv venligst igen!");

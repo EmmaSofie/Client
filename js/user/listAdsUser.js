@@ -64,7 +64,8 @@ function listAds() {
             });
         },
         error: function (data) {
-            alert(JSON.stringify(data))
+            alert("Der er ingen annoncer til salg, du kommer til startsiden");
+            location.reload();
         }
     });
 }
