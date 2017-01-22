@@ -21,7 +21,7 @@ function deleteUser() {
 
         success: function () {
             alert("Brugeren bliver nu slettet fra systemet, du viderestilles til startsiden ");
-            $('#centerPageAdminView').load('html/centerAdmin.html #centerPageAdminView')
+            $('#centerPageAdminView').load('html/centerAdmin.html #home')
         },
 
 

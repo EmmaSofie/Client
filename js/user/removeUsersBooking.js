@@ -15,7 +15,7 @@ function removeUsersBooking(){
         }),
         success: function() {
             alert("Du har ikke længere reseveret denne annonce");
-            location.reload();
+            $('#centerPageUserView').load('html/centerUser.html #home')
         },
         error: function() {
             alert("Har du egentlig reseveret denne annonce?");

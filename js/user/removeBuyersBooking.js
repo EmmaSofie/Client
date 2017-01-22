@@ -18,7 +18,7 @@ function removeBuyersBooking() {
         }),
         success: function () {
             alert("Annoncen vil blive sat til salg igen");
-            location.reload();
+            $('#centerPageUserView').load('html/centerUser.html #home')
         },
         error: function () {
             alert("Annoncen er allerede til salg");

@@ -25,7 +25,7 @@ function updateUsersAd() {
         }),
         success: function () {
             alert("Dine ændringer for annoncen lykkedes!");
-            location.reload();
+            $('#centerPageUserView').load('html/centerUser.html #home')
         },
         error: function () {
             alert("Prøv igen");

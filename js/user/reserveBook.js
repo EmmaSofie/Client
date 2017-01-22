@@ -19,7 +19,7 @@ function reserveBook() {
         success: function () {
             alert("Du har nu reserveret bogen.")
             alert("Du kommer til startsiden.")
-            location.reload();
+            $('#centerPageUserView').load('html/centerUser.html #home')
         },
         error: function () {
             alert("Det lykkedes desværre ikke at reservere bogen, prøv venligst igen!");
