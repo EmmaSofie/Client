@@ -27,7 +27,7 @@ function newUser() {
         }),
 
         success: function() { alert("Din bruger er nu oprettet, og du kan nu logge ind med dine indtastede oplysninger");
-            location.reload()
+            $('#centerPage').load('html/centerIndex.html #home')
 
 
         },
